@@ -3,7 +3,6 @@ const router = Router();
 
 // import all componenets
 import * as controller from '../controller/appController.js'
-import { registerMail } from "../controller/mailer.js";
 import Auth, {localVariables} from "../middleware/auth.js";
 
 // POST METHODS
@@ -21,7 +20,7 @@ router.route("/logins").post(
     );
 
 
-router.route("/registerMail").post(registerMail);
+
 
 router.route("/authenticate").post(controller.verifyUser, (req, res) => res.end());
 
