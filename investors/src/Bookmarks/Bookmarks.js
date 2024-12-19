@@ -93,7 +93,7 @@ const Bookmarks = () => {
   const startupId = JSON.parse(sessionStorage.getItem('startupId'));
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/getbookmarks?startupId=${startupId}`)
+    axios.get(`https://angelvestors-backend.onrender.com/api/getbookmarks?startupId=${startupId}`)
       .then(res => setBookmarks(res.data))
       .catch(err => console.error(err));
   }, [startupId]);
@@ -132,7 +132,7 @@ const Bookmarks = () => {
       ...formData,
       email: JSON.parse(sessionStorage.getItem('email')),
     };
-    axios.put('http://localhost:3001/api/form', payloadS, {headers: { "Authorization" : `Bearer ${tokenStartup}` }})
+    axios.put('https://angelvestors-backend.onrender.com/api/form', payloadS, {headers: { "Authorization" : `Bearer ${tokenStartup}` }})
       .then( response => {
         if(response.status === 201){
         console.log(response.data)
@@ -161,7 +161,7 @@ const Bookmarks = () => {
 
   const handleBookmarkDelete = (bookmarkid) => {
     try {
-      axios.delete(`http://localhost:3001/api/bookmarks/${bookmarkid}`);
+      axios.delete(`https://angelvestors-backend.onrender.com/api/bookmarks/${bookmarkid}`);
       // console.log(response.data.message);
       // handle successful bookmark deletion
     } catch (error) {

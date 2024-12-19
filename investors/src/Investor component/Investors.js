@@ -75,7 +75,7 @@ const Investors = ({investor}) => {
     const [investorFormData, setInvestorFormData] = useState([]);
 
     useEffect(() => {
-      axios.get("http://localhost:3001/api/investorFormData")
+      axios.get("https://angelvestors-backend.onrender.com/api/investorFormData")
         .then(response => setInvestorFormData(response.data))
         .catch(error => console.log(error));
     }, []);
@@ -108,7 +108,7 @@ const Investors = ({investor}) => {
         ...investorForm,
         email: emailInv,
       };
-      axios.put('http://localhost:3001/api/updateuser', payload, {headers: { "Authorization" : `Bearer ${token1}` }})
+      axios.put('https://angelvestors-backend.onrender.com/api/updateuser', payload, {headers: { "Authorization" : `Bearer ${token1}` }})
         .then( response => {
           if(response.status === 201){
           console.log(response.data)
@@ -145,7 +145,7 @@ const Investors = ({investor}) => {
 
 
     const handleBookmarkClick = (investorid) => {
-      axios.post('http://localhost:3001/api/bookmarks', {
+      axios.post('https://angelvestors-backend.onrender.com/api/bookmarks', {
         startupId: JSON.parse(sessionStorage.getItem('startupId')),
         investorId: investorid
       })
@@ -159,7 +159,7 @@ const Investors = ({investor}) => {
 
     const handleConnect = (investorid) => {
 
-      axios.post('http://localhost:3001/api/connect', {
+      axios.post('https://angelvestors-backend.onrender.com/api/connect', {
         startupId: JSON.parse(sessionStorage.getItem('startupId')),
         investorId: investorid
       })
@@ -236,7 +236,7 @@ const Investors = ({investor}) => {
       ...formData,
       email: JSON.parse(sessionStorage.getItem('email')),
     };
-    axios.put('http://localhost:3001/api/form', payloadS, {headers: { "Authorization" : `Bearer ${tokenStartup}` }})
+    axios.put('https://angelvestors-backend.onrender.com/api/form', payloadS, {headers: { "Authorization" : `Bearer ${tokenStartup}` }})
       .then( response => {
         if(response.status === 201){
         console.log(response.data)

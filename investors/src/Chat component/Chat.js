@@ -77,7 +77,7 @@ const Chat = () => {
   const divUnderMesages = useRef();
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:3001');
+    const ws = new WebSocket('ws://https://angelvestors-backend.onrender.com');
     setWs(ws);
     ws.addEventListener('message', handleMessage)
     
@@ -179,7 +179,7 @@ const Chat = () => {
 
   useEffect(() => {
     if(selectedUserId) {
-      axios.get('http://localhost:3001/messages/'+selectedUserId).then(res => {
+      axios.get('https://angelvestors-backend.onrender.com/messages/'+selectedUserId).then(res => {
         setMessages(res.data);
       });
     }
@@ -189,7 +189,7 @@ const Chat = () => {
 
   useEffect(() => {
     if(selectedStartupId) {
-      axios.get('http://localhost:3001/messagesTwo/'+selectedStartupId).then(res => {
+      axios.get('https://angelvestors-backend.onrender.com/messagesTwo/'+selectedStartupId).then(res => {
         setMessages(res.data);
       });
     }
@@ -245,7 +245,7 @@ const Chat = () => {
   const startupId = JSON.parse(sessionStorage.getItem('startupId'));
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/getchats?startupId=${startupId}`)
+    axios.get(`https://angelvestors-backend.onrender.com/api/getchats?startupId=${startupId}`)
       .then(res => setChats(res.data))
       .catch(err => console.error(err));
   }, [startupId]);
@@ -255,7 +255,7 @@ const Chat = () => {
 
   const handleChatDelete = (chatid) => {
     try {
-      axios.delete(`http://localhost:3001/api/connect/${chatid}`);
+      axios.delete(`https://angelvestors-backend.onrender.com/api/connect/${chatid}`);
       // console.log(response.data.message);
       // handle successful bookmark deletion
     } catch (error) {
@@ -271,7 +271,7 @@ const Chat = () => {
   const investorId = JSON.parse(sessionStorage.getItem('investorId'));
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/getInvestorChats?investorId=${investorId}`)
+    axios.get(`https://angelvestors-backend.onrender.com/api/getInvestorChats?investorId=${investorId}`)
       .then(res => setInvChats(res.data))
       .catch(err => console.error(err));
   }, [investorId]);
@@ -494,7 +494,7 @@ const Chat = () => {
           <Text>
             
             <AttachmentIcon mr='1rem'/>
-            <a target='_blank' href={"http://localhost:3001/uploads/" + message.file}>{message.file}</a>
+            <a target='_blank' href={"https://angelvestors-backend.onrender.com/uploads/" + message.file}>{message.file}</a>
           </Text>
          )}
          </Text> 
@@ -545,7 +545,7 @@ const Chat = () => {
           {message.file && (
           <div>
             <AttachmentIcon mr='1rem'/>
-            <a target='_blank' href={"http://localhost:3001/uploads/" + message.file}>{message.file}</a>
+            <a target='_blank' href={"https://angelvestors-backend.onrender.com/uploads/" + message.file}>{message.file}</a>
           </div>
          )}
           </Text>

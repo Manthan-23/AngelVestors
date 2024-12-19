@@ -17,7 +17,7 @@ import Chat from './Chat component/Chat';
 function App() {
 
   axios.defaults.withCredentials = true;
-  axios.defaults.baseURL = 'http://localhost:3001';
+  axios.defaults.baseURL = 'https://angelvestors-backend.onrender.com';
 
   const [userData, setUserData] = useState({});
 

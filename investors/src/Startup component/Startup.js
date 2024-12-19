@@ -27,7 +27,7 @@ const Startup = () => {
   const register = () => {
     const { name, companyName, email, password } = user
     if( name && companyName && email && password && (password === password) ){
-    axios.post("http://localhost:3001/api/signups", user)
+    axios.post("https://angelvestors-backend.onrender.com/api/signups", user)
     .then(res => {
       if(res.status === 201){
         alert("User registered Successfully. Please Login!")

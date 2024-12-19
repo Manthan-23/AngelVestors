@@ -42,7 +42,7 @@ const MainModal = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.put('http://localhost:3001/api/form', formData)
+    axios.put('https://angelvestors-backend.onrender.com/api/form', formData)
       .then( response => {
         if(response.status === 201){
         console.log(response.data)

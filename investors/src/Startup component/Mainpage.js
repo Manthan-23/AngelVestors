@@ -69,7 +69,7 @@ const Mainpage = () => {
       email: JSON.parse(sessionStorage.getItem('email')),
     };
 
-    axios.put('http://localhost:3001/api/form', payloadS, {headers: { "Authorization" : ` Bearer ${tokenStartup}` }})
+    axios.put('https://angelvestors-backend.onrender.com/api/form', payloadS, {headers: { "Authorization" : ` Bearer ${tokenStartup}` }})
       .then( response => {
         if(response.status === 201){
         console.log(response.data)
@@ -84,7 +84,7 @@ const Mainpage = () => {
   useEffect(() => {
     console.log(tokenStartup)
     // Make a GET request to fetch the saved form data from the backend
-    axios.get('http://localhost:3001/api/form/startup', {headers : {"Authorization" : ` Bearer ${tokenStartup}`}})
+    axios.get('https://angelvestors-backend.onrender.com/api/form/startup', {headers : {"Authorization" : ` Bearer ${tokenStartup}`}})
       .then((response) => {
         const savedFormData = response.data;
         setFormData(savedFormData);
@@ -182,7 +182,7 @@ useEffect(() => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3001/api/data")
+    axios.get("https://angelvestors-backend.onrender.com/api/data")
       .then(response => setData(response.data))
       .catch(error => console.log(error));
      
@@ -287,7 +287,7 @@ useEffect(() => {
       ...investorForm,
       email: emailInv,
     };
-    axios.put('http://localhost:3001/api/updateuser', payload, {headers: { "Authorization" : `Bearer ${token1}` }})
+    axios.put('https://angelvestors-backend.onrender.com/api/updateuser', payload, {headers: { "Authorization" : `Bearer ${token1}` }})
       .then( response => {
         if(response.status === 201){
         console.log(response.data)

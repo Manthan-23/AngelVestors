@@ -25,7 +25,7 @@ const SignupIn = () => {
   const registerInv = () => {
     const {fullName, email, password } = investor
     if( fullName && email && password && (password === password) ){
-    axios.post("http://localhost:3001/api/signupin", investor)
+    axios.post("https://angelvestors-backend.onrender.com/api/signupin", investor)
     .then(res => {
       if(res.status === 201){
         alert("Registered Successfully! Please Login")

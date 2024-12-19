@@ -42,7 +42,7 @@ const LoginIn = () => {
        password : password,
      };
 
-     axios.post("http://localhost:3001/api/loginin", loginData2)
+     axios.post("https://angelvestors-backend.onrender.com/api/loginin", loginData2)
      .then(res => {
        
        
