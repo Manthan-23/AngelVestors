@@ -1,0 +1,144 @@
+
+
+/* modal */
+
+.mod20 {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+  
+}
+
+
+
+/* Modal Content */
+.modalContent20{
+position: relative;
+margin: auto;
+text-align: center;
+padding: 0;
+border: 1px solid #888;
+width: 46%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s;
+height: 43rem;
+background-color: #fefefe;
+
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+.close20 {
+position: absolute;
+cursor: pointer;
+color: white;
+/* margin-left: 42.5rem;
+margin-top: -0.5rem; */
+left: 83.5rem;
+bottom: 38.2rem;
+font-size: 28px;
+font-weight: bold;
+background: transparent;
+}
+
+.close20:hover,
+.close20:focus {
+color: #181818;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modalHeader20 {
+padding: 8px 10px;
+background-color: #5cb85c;
+color: white;
+
+
+}
+
+.modalHeader20 h2{
+font-size: 2.5rem;
+
+
+}
+
+.mod-background20{
+  background-color: #470a1a;
+}
+
+.modalBody20 {
+padding: 5px 10px;
+padding-bottom: 5rem;
+/* font-size: 2rem;
+margin-bottom: 5rem; */
+}
+
+.modal-footer20 {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+.btn20{
+  margin-right: 11rem;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-top: 2rem;
+  background-color: #1cbe73;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  border-radius: 1rem;
+}
+
+.hr1{
+  margin-top: 12rem;
+}
+
+.btn20:hover{
+  background-color: #19ab67;
+}
+
+.btn20{
+margin-left: 2rem;
+padding: 1rem 2rem 1rem 2rem;;
+margin-top: 2rem;
+background-color: #1cbe73;
+border: none;
+font-size: 2rem;
+color: white;
+border-radius: 1rem;
+}
+
+.btn20:hover{
+background-color: #19ab67;
+}
+
+#resume{
+  margin-top: 5rem;
+}
+
+
+
+
+
+
+

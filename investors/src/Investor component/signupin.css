@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* signup section */
+
+
+#signup-in_body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+.alsInSta{
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+#company_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.7rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #19ab67;
+}
+
+#signup-in_heading{
+    font-size: 1.9rem;
+    display: none;
+    padding: 2rem 0 0 0;
+    justify-content: center;
+}
+
+#signup-in_img_1{
+    display: none;
+}
+
+#register{
+    padding: 1rem 0rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#reg_h{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#r1{
+    font-size: 1.6rem;
+}
+
+label{
+    font-size: 2rem;
+    display: flex;
+    line-height: 2rem;
+}
+
+.inputIn{
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    border-color: black;
+    height: 4rem;
+    /* color: #19ab67; */
+    outline: 2px solid #19ab67;
+}
+
+/* input{
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    border-color: #efefef;
+    height: 4rem;
+    outline-color: #19ab67;
+  } */
+
+.tacbox a{
+    padding-left: 0.5rem;
+}
+
+#checkbox{
+
+}
+
+#clabel{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-top: -20px;
+}
+
+#button_reg1{
+    background-color: #1cbe73;
+    border-radius: 1rem;
+    border: none;
+    font-size: 2rem;
+    margin-top: 2.9rem;
+    margin-left: 18rem;
+    padding: 1rem 3rem 1rem 3rem;
+    width: 30rem;
+    cursor: pointer;
+
+}
+
+#button_reg:hover{
+    background-color: #19ab67;
+}
+
+  
+  @media(max-width: 998px){
+    html{
+        font-size: 55%;
+    }
+  }
+
+  @media(max-width: 600px){
+    html{
+        font-size: 45%;
+    }
+  }

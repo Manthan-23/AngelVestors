@@ -1,0 +1,27 @@
+#fifth_body_index{
+    display: flex;   
+    margin-left: 30rem;
+    margin-right: 30rem; 
+}
+
+#fifth_heading_index{
+    font-size: 4.5rem;
+}
+
+.fifth-two{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#fbody_btn_index{
+    padding: 1rem;
+}
+
+.me-5{
+    font-size: 2rem;
+}
+
+#first_heading{
+    margin-left: 6rem;
+}
