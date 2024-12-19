@@ -1,18 +1,14 @@
 import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
-import { render } from "ejs"
-import bcrypt from "bcryptjs"
-import pkg from "jsonwebtoken"
+
 import passport from "passport"
 import session from "express-session"
 import bodyParser from "body-parser"
 import router from './router/route.js';
 import morgan from "morgan"
-import connect from "./database/conn.js"
-import ws from "ws"
+
 import { WebSocketServer } from "ws"
-import { WebSocket } from "ws"
 import cookieParser from "cookie-parser"
 import jwt from "jsonwebtoken";
 import MessageModel from "./model/Message.model.js"
@@ -40,7 +36,7 @@ const __dirname = dirname(__filename);
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-mongoose.connect("mongodb://0.0.0.0:27017/Users", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

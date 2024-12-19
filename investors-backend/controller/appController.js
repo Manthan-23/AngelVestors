@@ -2,15 +2,10 @@ import UserModel from "../model/User.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import otpGenerator from "otp-generator";
-import nodemailer from "nodemailer"
-import Mailgen from "mailgen"
-import CRD from "../env.js"
-import FormModel from "../model/Form.model.js";
+
 import InvestorModel from "../model/Investor.model.js";
 import BookmarkModel from "../model/Bookmark.model.js";
-import cookieParser from "cookie-parser";
 import ChatRoomModel from "../model/ChatRoom.model.js";
-import MessageModel from "../model/Message.model.js";
 import dotenv from "dotenv";
 
 dotenv.config();
