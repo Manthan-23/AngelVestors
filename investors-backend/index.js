@@ -71,7 +71,8 @@ app.use(session({
   }
 
 app.use(cors({
-    origin: 'https://angelvestors.onrender.com/',
+    origin: 'https://angelvestors.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   }));
 
