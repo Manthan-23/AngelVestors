@@ -71,7 +71,7 @@ app.use(session({
   }
 
 app.use(cors({
-    origin: 'https://angelvestors-backend.onrender.com',
+    origin: 'https://angelvestors.onrender.com/',
     credentials: true,
   }));
 
