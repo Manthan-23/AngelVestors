@@ -77,7 +77,7 @@ const Chat = () => {
   const divUnderMesages = useRef();
 
   useEffect(() => {
-    const ws = new WebSocket('ws://https://angelvestors-backend.onrender.com');
+    const ws = new WebSocket('wss://https://angelvestors-backend.onrender.com');
     setWs(ws);
     ws.addEventListener('message', handleMessage)
     
